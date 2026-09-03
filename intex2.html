@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="kk">
 <head>
@@ -338,7 +339,6 @@
             background: white;
             padding: 30px;
             border-radius: 22px;
-            position: relative;
         }
 
         .number {
@@ -449,6 +449,270 @@
             text-align: center;
         }
 
+        /* ================= TEST PAGE ================= */
+
+        .test-page {
+            min-height: 100vh;
+            background: #f2faff;
+            padding: 40px 20px;
+        }
+
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .test-logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #2676b8;
+        }
+
+        .back-btn {
+            border: none;
+            background: white;
+            padding: 10px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            color: #2676b8;
+        }
+
+        .test-card {
+            background: white;
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 15px 40px rgba(50,120,160,0.1);
+        }
+
+        .progress {
+            width: 100%;
+            height: 8px;
+            background: #e5f3fa;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #61bbed;
+            transition: 0.3s;
+        }
+
+        .step-number {
+            color: #63bdec;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .test-card h1 {
+            color: #244f6b;
+            font-size: 30px;
+            line-height: 1.3;
+        }
+
+        .description {
+            color: #718898;
+            line-height: 1.6;
+            margin-top: 12px;
+        }
+
+        .age-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d5eaf4;
+            border-radius: 12px;
+            margin-top: 15px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .answers {
+            display: grid;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .answer {
+            padding: 17px;
+            border: 1px solid #dceff7;
+            border-radius: 14px;
+            background: #fbfeff;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        .answer:hover {
+            background: #eef9ff;
+            border-color: #68bced;
+        }
+
+        .answer.selected {
+            background: #dff4ff;
+            border-color: #55afe2;
+        }
+
+        .next-btn {
+            width: 100%;
+            padding: 16px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 14px;
+            background: #5db9ed;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .next-btn:hover {
+            background: #43a9df;
+        }
+
+        .result-icon {
+            font-size: 65px;
+            text-align: center;
+        }
+
+        .result-title {
+            text-align: center;
+            font-size: 30px;
+            color: #244f6b;
+            margin-top: 10px;
+        }
+
+        .result-text {
+            text-align: center;
+            color: #718898;
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+
+        .recommendation {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 16px;
+            margin-top: 25px;
+        }
+
+        .recommendation h3 {
+            color: #287db5;
+            margin-bottom: 10px;
+        }
+
+        .recommendation p {
+            color: #60788b;
+            line-height: 1.6;
+        }
+
+        /* ================= LOGIN PAGE ================= */
+
+        .login-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f2faff, #e7f7ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 430px;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(53,130,170,0.12);
+        }
+
+        .login-logo {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #2676b8;
+            margin-bottom: 25px;
+        }
+
+        .login-card h1 {
+            text-align: center;
+            color: #244f6b;
+            margin-bottom: 10px;
+        }
+
+        .login-card > p {
+            text-align: center;
+            color: #718898;
+            margin-bottom: 25px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 14px;
+            border: 1px solid #d5eaf4;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .login-submit {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 13px;
+            background: #5db9ed;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-submit:hover {
+            background: #43a9df;
+        }
+
+        .login-back {
+            width: 100%;
+            padding: 13px;
+            margin-top: 12px;
+            border: 1px solid #c8e8f8;
+            border-radius: 13px;
+            background: white;
+            color: #2676b8;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* ================= EXERCISES ================= */
+
+        .exercise-card {
+            background: white;
+            padding: 22px;
+            border-radius: 18px;
+            margin-top: 15px;
+            border: 1px solid #e0f1f8;
+        }
+
+        .exercise-card h3 {
+            color: #287db5;
+            margin-bottom: 8px;
+        }
+
+        .exercise-card p {
+            color: #60788b;
+            line-height: 1.6;
+        }
+
         /* ================= RESPONSIVE ================= */
 
         @media (max-width: 950px) {
@@ -506,993 +770,1004 @@
             .cta-box h2 {
                 font-size: 28px;
             }
+
+            .test-card {
+                padding: 23px;
+            }
+
+            .test-card h1 {
+                font-size: 25px;
+            }
+
+            .login-card {
+                padding: 25px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<!-- ================= HEADER ================= -->
 
-    <header>
+<header id="mainHeader">
 
-        <a href="#" class="logo">
-            <div class="logo-icon">🗣️</div>
-            <div class="logo-text">СӨЙЛЕ</div>
-        </a>
+    <a href="#" class="logo">
+        <div class="logo-icon">🗣️</div>
+        <div class="logo-text">СӨЙЛЕ</div>
+    </a>
 
-        <nav>
-            <a href="#about">Біз туралы</a>
-            <a href="#features">Мүмкіндіктер</a>
-            <a href="#how">Қалай жұмыс істейді?</a>
-            <a href="#contact">Байланыс</a>
-        </nav>
+    <nav>
+        <a href="#about">Біз туралы</a>
+        <a href="#features">Мүмкіндіктер</a>
+        <a href="#how">Қалай жұмыс істейді?</a>
+        <a href="#contact">Байланыс</a>
+    </nav>
 
-        <button class="login-btn" onclick="login()">
-            Кіру
-        </button>
+    <button class="login-btn" onclick="login()">
+        Кіру
+    </button>
 
-    </header>
+</header>
 
 
-    <!-- ================= HERO ================= -->
+<!-- ================= MAIN PAGE ================= -->
 
-    <main>
+<main id="mainPage">
 
-        <section class="hero">
+    <section class="hero">
 
-            <div class="hero-content">
+        <div class="hero-content">
 
-                <div class="badge">
-                    🌱 Баланың сөйлеу дамуына арналған платформа
-                </div>
-
-                <h1>
-                    Балаңыздың<br>
-                    <span>сөйлеуін бірге</span><br>
-                    дамытайық
-                </h1>
-
-                <p>
-                    «СӨЙЛЕ» — ата-аналарға баланың сөйлеу дамуын
-                    бақылауға, пайдалы жаттығулар жасауға және
-                    логопед маманынан көмек алуға мүмкіндік беретін
-                    заманауи платформа.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <button class="primary-btn" onclick="startTest()">
-                        Тестті бастау →
-                    </button>
-
-                    <button class="secondary-btn" onclick="learnMore()">
-                        Толығырақ білу
-                    </button>
-
-                </div>
-
+            <div class="badge">
+                🌱 Баланың сөйлеу дамуына арналған платформа
             </div>
 
-
-            <!-- Иллюстрация -->
-
-            <div class="hero-image">
-
-                <div class="circle"></div>
-
-                <div class="speech one">
-                    Сөйлейік! 💬
-                </div>
-
-                <div class="speech two">
-                    👏 Жарайсың!
-                </div>
-
-                <div class="child-card">
-
-                    <div class="child-avatar">
-                        👧
-                    </div>
-
-                    <h3>
-                        Мен сөйлеп үйренемін!
-                    </h3>
-
-                    <p>
-                        Күн сайын бірге жаттығайық 🌱
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section id="about">
-
-            <div class="section-title">
-
-                <h2>
-                    «СӨЙЛЕ» дегеніміз не?
-                </h2>
-
-                <p>
-                    Бұл — баланың сөйлеу қабілетін ерте кезеңнен
-                    бақылауға және дамытуға көмектесетін
-                    ата-ана мен логопедке арналған цифрлық платформа.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= FEATURES ================= -->
-
-        <section class="features" id="features">
-
-            <div class="section-title">
-
-                <h2>
-                    Платформаның мүмкіндіктері
-                </h2>
-
-                <p>
-                    Балаңыздың сөйлеу дамуына қажетті негізгі
-                    құралдардың барлығы бір жерде.
-                </p>
-
-            </div>
-
-
-            <div class="feature-grid">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        📝
-                    </div>
-
-                    <h3>
-                        Диагностика
-                    </h3>
-
-                    <p>
-                        Баланың сөйлеу дамуына қатысты
-                        бастапқы ақпаратты жинауға арналған
-                        қарапайым тест.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        🧩
-                    </div>
-
-                    <h3>
-                        Жаттығулар
-                    </h3>
-
-                    <p>
-                        Артикуляциялық, тыныс алу және
-                        дыбысты дұрыс айтуға арналған
-                        ойын түріндегі тапсырмалар.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        📊
-                    </div>
-
-                    <h3>
-                        Прогресс
-                    </h3>
-
-                    <p>
-                        Баланың күнделікті орындаған
-                        тапсырмаларын және даму динамикасын
-                        бақылаңыз.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-                        👩‍⚕️
-                    </div>
-
-                    <h3>
-                        Логопед
-                    </h3>
-
-                    <p>
-                        Маманның ұсыныстарын алып,
-                        баланың сөйлеу дамуы бойынша
-                        бағыт-бағдар алуға болады.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= HOW ================= -->
-
-        <section class="steps" id="how">
-
-            <div class="section-title">
-
-                <h2>
-                    Қалай жұмыс істейді?
-                </h2>
-
-                <p>
-                    Барлығы қарапайым әрі түсінікті.
-                </p>
-
-            </div>
-
-
-            <div class="steps-grid">
-
-                <div class="step">
-
-                    <div class="number">
-                        1
-                    </div>
-
-                    <h3>
-                        Бала туралы ақпарат
-                    </h3>
-
-                    <p>
-                        Баланың жасы мен сөйлеу ерекшеліктері
-                        туралы қысқаша ақпарат енгізіңіз.
-                    </p>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="number">
-                        2
-                    </div>
-
-                    <h3>
-                        Тесттен өтіңіз
-                    </h3>
-
-                    <p>
-                        Бірнеше қарапайым сұрақ арқылы
-                        баланың сөйлеу дамуына қатысты
-                        бастапқы бағалау жүргізіледі.
-                    </p>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="number">
-                        3
-                    </div>
-
-                    <h3>
-                        Жаттығуды бастаңыз
-                    </h3>
-
-                    <p>
-                        Платформа ұсынған жаттығуларды
-                        баламен бірге орындап, нәтижені
-                        бақылаңыз.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CTA ================= -->
-
-        <section class="cta" id="contact">
-
-            <div class="cta-box">
-
-                <h2>
-                    Бүгіннен бастап бірге сөйлейік! 💙
-                </h2>
-
-                <p>
-                    Баланың сөйлеу дамуына көңіл бөлу —
-                    оның болашағына жасалған маңызды қадам.
-                </p>
-
-                <button class="cta-btn" onclick="startTest()">
-                    Тестті бастау
+            <h1>
+                Балаңыздың<br>
+                <span>сөйлеуін бірге</span><br>
+                дамытайық
+            </h1>
+
+            <p>
+                «СӨЙЛЕ» — ата-аналарға баланың сөйлеу дамуын
+                бақылауға, пайдалы жаттығулар жасауға және
+                логопед маманынан көмек алуға мүмкіндік беретін
+                заманауи платформа.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" onclick="startTest()">
+                    Тестті бастау →
+                </button>
+
+                <button class="secondary-btn" onclick="learnMore()">
+                    Толығырақ білу
                 </button>
 
             </div>
 
-        </section>
-
-    </main>
+        </div>
 
 
-    <!-- ================= FOOTER ================= -->
+        <div class="hero-image">
 
-    <footer>
+            <div class="circle"></div>
 
-        <div class="footer-content">
+            <div class="speech one">
+                Сөйлейік! 💬
+            </div>
 
-            <div class="footer-brand">
+            <div class="speech two">
+                👏 Жарайсың!
+            </div>
 
-                <h2>
-                    🗣️ СӨЙЛЕ
-                </h2>
+            <div class="child-card">
+
+                <div class="child-avatar">
+                    👧
+                </div>
+
+                <h3>
+                    Мен сөйлеп үйренемін!
+                </h3>
 
                 <p>
-                    Баланың сөйлеу дамуын қолдайтын
-                    заманауи логопедиялық платформа.
+                    Күн сайын бірге жаттығайық 🌱
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>
+                «СӨЙЛЕ» дегеніміз не?
+            </h2>
+
+            <p>
+                Бұл — баланың сөйлеу қабілетін ерте кезеңнен
+                бақылауға және дамытуға көмектесетін
+                ата-ана мен логопедке арналған цифрлық платформа.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features" id="features">
+
+        <div class="section-title">
+
+            <h2>
+                Платформаның мүмкіндіктері
+            </h2>
+
+            <p>
+                Балаңыздың сөйлеу дамуына қажетті негізгі
+                құралдардың барлығы бір жерде.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Диагностика
+                </h3>
+
+                <p>
+                    Баланың сөйлеу дамуына қатысты
+                    бастапқы ақпаратты жинауға арналған
+                    қарапайым тест.
                 </p>
 
             </div>
 
 
-            <div class="footer-links">
+            <div class="feature-card">
 
-                <h4>
-                    Навигация
-                </h4>
+                <div class="feature-icon">
+                    🧩
+                </div>
 
-                <a href="#about">
-                    Біз туралы
-                </a>
+                <h3>
+                    Жаттығулар
+                </h3>
 
-                <a href="#features">
-                    Мүмкіндіктер
-                </a>
-
-                <a href="#how">
-                    Қалай жұмыс істейді?
-                </a>
+                <p>
+                    Артикуляциялық, тыныс алу және
+                    дыбысты дұрыс айтуға арналған
+                    ойын түріндегі тапсырмалар.
+                </p>
 
             </div>
 
 
-            <div class="footer-links">
+            <div class="feature-card">
 
-                <h4>
-                    Байланыс
-                </h4>
+                <div class="feature-icon">
+                    📊
+                </div>
 
-                <a href="#">
-                    Instagram
-                </a>
+                <h3>
+                    Прогресс
+                </h3>
 
-                <a href="#">
-                    Email
-                </a>
+                <p>
+                    Баланың күнделікті орындаған
+                    тапсырмаларын және даму динамикасын
+                    бақылаңыз.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    👩‍⚕️
+                </div>
+
+                <h3>
+                    Логопед
+                </h3>
+
+                <p>
+                    Маманның ұсыныстарын алып,
+                    баланың сөйлеу дамуы бойынша
+                    бағыт-бағдар алуға болады.
+                </p>
 
             </div>
 
         </div>
 
+    </section>
 
-        <div class="footer-bottom">
 
-            © 2026 «СӨЙЛЕ». Барлық құқықтар қорғалған.
+    <!-- HOW -->
+
+    <section class="steps" id="how">
+
+        <div class="section-title">
+
+            <h2>
+                Қалай жұмыс істейді?
+            </h2>
+
+            <p>
+                Барлығы қарапайым әрі түсінікті.
+            </p>
 
         </div>
 
-    </footer>
 
-           <!-- ================= JAVASCRIPT ================= -->
+        <div class="steps-grid">
+
+            <div class="step">
+
+                <div class="number">
+                    1
+                </div>
+
+                <h3>
+                    Бала туралы ақпарат
+                </h3>
+
+                <p>
+                    Баланың жасы мен сөйлеу ерекшеліктері
+                    туралы қысқаша ақпарат енгізіңіз.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="number">
+                    2
+                </div>
+
+                <h3>
+                    Тесттен өтіңіз
+                </h3>
+
+                <p>
+                    Бірнеше қарапайым сұрақ арқылы
+                    баланың сөйлеу дамуына қатысты
+                    бастапқы бағалау жүргізіледі.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="number">
+                    3
+                </div>
+
+                <h3>
+                    Жаттығуды бастаңыз
+                </h3>
+
+                <p>
+                    Платформа ұсынған жаттығуларды
+                    баламен бірге орындап, нәтижені
+                    бақылаңыз.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta" id="contact">
+
+        <div class="cta-box">
+
+            <h2>
+                Бүгіннен бастап бірге сөйлейік! 💙
+            </h2>
+
+            <p>
+                Баланың сөйлеу дамуына көңіл бөлу —
+                оның болашағына жасалған маңызды қадам.
+            </p>
+
+            <button class="cta-btn" onclick="startTest()">
+                Тестті бастау
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="mainFooter">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <h2>
+                🗣️ СӨЙЛЕ
+            </h2>
+
+            <p>
+                Баланың сөйлеу дамуын қолдайтын
+                заманауи логопедиялық платформа.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Навигация
+            </h4>
+
+            <a href="#about">
+                Біз туралы
+            </a>
+
+            <a href="#features">
+                Мүмкіндіктер
+            </a>
+
+            <a href="#how">
+                Қалай жұмыс істейді?
+            </a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Байланыс
+            </h4>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 «СӨЙЛЕ». Барлық құқықтар қорғалған.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
-function startTest() {
 
-    document.body.innerHTML = `
+    /* ================= TEST VARIABLES ================= */
 
-        <style>
-
-            body {
-                background: #f2faff;
-                font-family: Arial, sans-serif;
-                margin: 0;
-                color: #294b60;
-            }
-
-            .test-page {
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 40px 20px;
-            }
-
-            .test-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 30px;
-            }
-
-            .test-logo {
-                font-size: 25px;
-                font-weight: bold;
-                color: #2676b8;
-            }
-
-            .back-btn {
-                border: none;
-                background: white;
-                padding: 10px 18px;
-                border-radius: 12px;
-                cursor: pointer;
-                color: #2676b8;
-            }
-
-            .test-card {
-                background: white;
-                border-radius: 25px;
-                padding: 35px;
-                box-shadow: 0 15px 40px rgba(50,120,160,0.1);
-            }
-
-            .progress {
-                width: 100%;
-                height: 8px;
-                background: #e5f3fa;
-                border-radius: 10px;
-                overflow: hidden;
-                margin-bottom: 30px;
-            }
-
-            .progress-bar {
-                height: 100%;
-                width: 0%;
-                background: #61bbed;
-                transition: 0.3s;
-            }
-
-            .step-number {
-                color: #63bdec;
-                font-weight: bold;
-                margin-bottom: 12px;
-            }
-
-            h1 {
-                color: #244f6b;
-                font-size: 30px;
-            }
-
-            .description {
-                color: #718898;
-                line-height: 1.6;
-            }
-
-            .age-input {
-                width: 100%;
-                padding: 15px;
-                border: 1px solid #d5eaf4;
-                border-radius: 12px;
-                margin-top: 15px;
-                font-size: 16px;
-                outline: none;
-            }
-
-            .answers {
-                display: grid;
-                gap: 12px;
-                margin-top: 25px;
-            }
-
-            .answer {
-                padding: 17px;
-                border: 1px solid #dceff7;
-                border-radius: 14px;
-                background: #fbfeff;
-                cursor: pointer;
-                text-align: left;
-                font-size: 16px;
-                transition: 0.2s;
-            }
-
-            .answer:hover {
-                background: #eef9ff;
-                border-color: #68bced;
-            }
-
-            .answer.selected {
-                background: #dff4ff;
-                border-color: #55afe2;
-            }
-
-            .next-btn {
-                width: 100%;
-                padding: 16px;
-                margin-top: 25px;
-                border: none;
-                border-radius: 14px;
-                background: #5db9ed;
-                color: white;
-                font-size: 16px;
-                font-weight: bold;
-                cursor: pointer;
-            }
-
-            .next-btn:hover {
-                background: #43a9df;
-            }
-
-            .result-icon {
-                font-size: 65px;
-                text-align: center;
-            }
-
-            .result-title {
-                text-align: center;
-                font-size: 30px;
-                color: #244f6b;
-            }
-
-            .result-text {
-                text-align: center;
-                color: #718898;
-                line-height: 1.7;
-            }
-
-            .recommendation {
-                background: #f0f9ff;
-                padding: 20px;
-                border-radius: 16px;
-                margin-top: 25px;
-            }
-
-            .recommendation h3 {
-                color: #287db5;
-            }
-
-            @media(max-width:600px) {
-
-                .test-card {
-                    padding: 23px;
-                }
-
-                h1 {
-                    font-size: 25px;
-                }
-
-            }
-
-        </style>
+    let currentQuestion = 0;
+    let score = 0;
+    let childAge = 0;
 
 
-        <div class="test-page">
+    /* ================= QUESTIONS ================= */
 
-            <div class="test-header">
+    const questions = [
 
-                <div class="test-logo">
-                    🗣️ СӨЙЛЕ
+        {
+            question: "Бала қарапайым сөздерді анық айта ала ма?",
+            answers: [
+                ["Иә", 2],
+                ["Кейде", 1],
+                ["Жоқ", 0]
+            ]
+        },
+
+        {
+            question: "Бала өз ойын сөзбен жеткізе ала ма?",
+            answers: [
+                ["Иә, еркін жеткізеді", 2],
+                ["Кейде қиналады", 1],
+                ["Жоқ, қиналады", 0]
+            ]
+        },
+
+        {
+            question: "Бала сұрақтарға түсінікті жауап бере ала ма?",
+            answers: [
+                ["Иә", 2],
+                ["Кейде", 1],
+                ["Жоқ", 0]
+            ]
+        },
+
+        {
+            question: "Бала кейбір дыбыстарды айтуда қинала ма?",
+            answers: [
+                ["Жоқ", 2],
+                ["Кейбір дыбыстарда", 1],
+                ["Иә, жиі қиналады", 0]
+            ]
+        },
+
+        {
+            question: "Бала жаңа сөздерді үйренуге қызығушылық таныта ма?",
+            answers: [
+                ["Иә", 2],
+                ["Кейде", 1],
+                ["Сирек", 0]
+            ]
+        }
+
+    ];
+
+
+    /* ================= START TEST ================= */
+
+    function startTest() {
+
+        document.getElementById("mainPage").style.display = "none";
+        document.getElementById("mainHeader").style.display = "none";
+        document.getElementById("mainFooter").style.display = "none";
+
+        document.body.insertAdjacentHTML("beforeend", `
+
+            <div class="test-page" id="testPage">
+
+                <div class="test-container">
+
+                    <div class="test-header">
+
+                        <div class="test-logo">
+                            🗣️ СӨЙЛЕ
+                        </div>
+
+                        <button
+                            class="back-btn"
+                            onclick="backToHome()"
+                        >
+                            ← Басты бет
+                        </button>
+
+                    </div>
+
+
+                    <div class="test-card">
+
+                        <div class="progress">
+                            <div
+                                class="progress-bar"
+                                id="progressBar">
+                            </div>
+                        </div>
+
+                        <div id="testContent"></div>
+
+                    </div>
+
                 </div>
-
-                <button class="back-btn" onclick="location.reload()">
-                    ← Басты бет
-                </button>
 
             </div>
 
+        `);
 
-            <div class="test-card">
+        showAgeStep();
+    }
 
-                <div class="progress">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
 
-                <div id="testContent"></div>
+    /* ================= AGE STEP ================= */
 
+    function showAgeStep() {
+
+        document.getElementById("progressBar").style.width = "0%";
+
+        document.getElementById("testContent").innerHTML = `
+
+            <div class="step-number">
+                Бастапқы қадам
             </div>
 
-        </div>
+            <h1>
+                Балаңыз туралы бастайық 👋
+            </h1>
 
-    `;
+            <p class="description">
+                Алдымен баланың жасын көрсетіңіз.
+                Бұл тестті түсінікті түрде бастауға көмектеседі.
+            </p>
 
-    showAgeStep();
-}
-
-
-let currentQuestion = 0;
-let score = 0;
-let childAge = 0;
-
-
-const questions = [
-
-    {
-        question: "Бала қарапайым сөздерді анық айта ала ма?",
-        answers: [
-            ["Иә", 2],
-            ["Кейде", 1],
-            ["Жоқ", 0]
-        ]
-    },
-
-    {
-        question: "Бала өз ойын сөзбен жеткізе ала ма?",
-        answers: [
-            ["Иә, еркін жеткізеді", 2],
-            ["Кейде қиналады", 1],
-            ["Жоқ, қиналады", 0]
-        ]
-    },
-
-    {
-        question: "Бала сұрақтарға түсінікті жауап бере ала ма?",
-        answers: [
-            ["Иә", 2],
-            ["Кейде", 1],
-            ["Жоқ", 0]
-        ]
-    },
-
-    {
-        question: "Бала кейбір дыбыстарды айтуда қинала ма?",
-        answers: [
-            ["Жоқ", 2],
-            ["Кейбір дыбыстарда", 1],
-            ["Иә, жиі қиналады", 0]
-        ]
-    },
-
-    {
-        question: "Бала жаңа сөздерді үйренуге қызығушылық таныта ма?",
-        answers: [
-            ["Иә", 2],
-            ["Кейде", 1],
-            ["Сирек", 0]
-        ]
-    }
-
-];
-
-
-function showAgeStep() {
-
-    document.getElementById("progressBar").style.width = "0%";
-
-    document.getElementById("testContent").innerHTML = `
-
-        <div class="step-number">
-            1-қадам
-        </div>
-
-        <h1>
-            Балаңыз туралы бастайық 👋
-        </h1>
-
-        <p class="description">
-            Алдымен баланың жасын көрсетіңіз.
-            Бұл сұрақтарды баланың жасына қарай
-            дұрыс бағыттауға көмектеседі.
-        </p>
-
-        <input
-            class="age-input"
-            id="age"
-            type="number"
-            min="1"
-            max="10"
-            placeholder="Баланың жасы"
-        >
-
-        <button
-            class="next-btn"
-            onclick="startQuestions()"
-        >
-            Жалғастыру →
-        </button>
-
-    `;
-}
-
-
-function startQuestions() {
-
-    const age = document.getElementById("age").value;
-
-    if (!age || age < 1 || age > 10) {
-
-        alert("Баланың жасын 1-10 аралығында енгізіңіз.");
-
-        return;
-    }
-
-    childAge = age;
-    currentQuestion = 0;
-    score = 0;
-
-    showQuestion();
-}
-
-
-function showQuestion() {
-
-    const question = questions[currentQuestion];
-
-    const progress =
-        ((currentQuestion + 1) / questions.length) * 100;
-
-    document.getElementById("progressBar").style.width =
-        progress + "%";
-
-
-    let answersHTML = "";
-
-    question.answers.forEach((answer, index) => {
-
-        answersHTML += `
+            <input
+                class="age-input"
+                id="age"
+                type="number"
+                min="1"
+                max="10"
+                placeholder="Баланың жасы"
+            >
 
             <button
-                class="answer"
-                onclick="selectAnswer(${answer[1]}, this)"
+                class="next-btn"
+                onclick="startQuestions()"
             >
-                ${answer[0]}
+                Жалғастыру →
             </button>
 
         `;
-
-    });
-
-
-    document.getElementById("testContent").innerHTML = `
-
-        <div class="step-number">
-            ${currentQuestion + 1}-сұрақ / ${questions.length}
-        </div>
-
-        <h1>
-            ${question.question}
-        </h1>
-
-        <div class="answers">
-
-            ${answersHTML}
-
-        </div>
-
-    `;
-}
+    }
 
 
-function selectAnswer(points, element) {
+    /* ================= START QUESTIONS ================= */
 
-    score += points;
+    function startQuestions() {
 
-    document.querySelectorAll(".answer").forEach(button => {
+        const ageInput = document.getElementById("age");
 
-        button.disabled = true;
+        const age = Number(ageInput.value);
 
-    });
+        if (!age || age < 1 || age > 10) {
+
+            alert("Баланың жасын 1-10 аралығында енгізіңіз.");
+
+            return;
+        }
+
+        childAge = age;
+
+        currentQuestion = 0;
+        score = 0;
+
+        showQuestion();
+    }
 
 
-    element.classList.add("selected");
+    /* ================= SHOW QUESTION ================= */
+
+    function showQuestion() {
+
+        const question = questions[currentQuestion];
+
+        const progress =
+            ((currentQuestion + 1) / questions.length) * 100;
+
+        document.getElementById("progressBar").style.width =
+            progress + "%";
 
 
-    setTimeout(() => {
+        let answersHTML = "";
 
-        currentQuestion++;
 
-        if (currentQuestion < questions.length) {
+        question.answers.forEach((answer) => {
 
-            showQuestion();
+            answersHTML += `
 
-        } else {
+                <button
+                    class="answer"
+                    onclick="selectAnswer(${answer[1]}, this)"
+                >
+                    ${answer[0]}
+                </button>
 
-            showResult();
+            `;
+
+        });
+
+
+        document.getElementById("testContent").innerHTML = `
+
+            <div class="step-number">
+                ${currentQuestion + 1}-сұрақ / ${questions.length}
+            </div>
+
+            <h1>
+                ${question.question}
+            </h1>
+
+            <div class="answers">
+                ${answersHTML}
+            </div>
+
+        `;
+    }
+
+
+    /* ================= SELECT ANSWER ================= */
+
+    function selectAnswer(points, element) {
+
+        score += points;
+
+        const buttons =
+            document.querySelectorAll(".answer");
+
+
+        buttons.forEach(button => {
+
+            button.disabled = true;
+
+        });
+
+
+        element.classList.add("selected");
+
+
+        setTimeout(() => {
+
+            currentQuestion++;
+
+
+            if (currentQuestion < questions.length) {
+
+                showQuestion();
+
+            } else {
+
+                showResult();
+
+            }
+
+        }, 400);
+    }
+
+
+    /* ================= RESULT ================= */
+
+    function showResult() {
+
+        document.getElementById("progressBar").style.width = "100%";
+
+
+        let title;
+        let text;
+        let recommendation;
+
+
+        if (score >= 8) {
+
+            title = "Сөйлеу дағдылары жақсы деңгейде 🌱";
+
+            text =
+                "Жауаптарыңыз бойынша баланың сөйлеу дағдылары "
+                + "жалпы жақсы деңгейде көрінеді.";
+
+            recommendation =
+                "Күнделікті әңгімелесу, кітап оқу және ойын арқылы "
+                + "сөйлеуді дамытуды жалғастырыңыз.";
 
         }
 
-    }, 400);
+        else if (score >= 5) {
 
-}
+            title = "Қосымша көңіл бөлген жөн 💙";
 
+            text =
+                "Кейбір сөйлеу дағдыларын дамытуға қосымша "
+                + "жаттығулар пайдалы болуы мүмкін.";
 
-function showResult() {
+            recommendation =
+                "Артикуляциялық жаттығулар жасап, баламен жиі "
+                + "сөйлесіп, жаңа сөздерді бірге үйреніңіз.";
 
-    document.getElementById("progressBar").style.width = "100%";
+        }
 
+        else {
 
-    let title;
-    let text;
-    let recommendation;
+            title = "Маманмен кеңескен дұрыс 👩‍⚕️";
 
+            text =
+                "Жауаптарыңыз бойынша кейбір сөйлеу дағдыларына "
+                + "қосымша назар аударған жөн болуы мүмкін.";
 
-    if (score >= 8) {
-
-        title = "Сөйлеу дамуы жақсы деңгейде 🌱";
-
-        text =
-            "Жауаптарыңыз бойынша баланың сөйлеу дағдылары " +
-            "жалпы жақсы деңгейде көрінеді.";
-
-        recommendation =
-            "Күнделікті әңгімелесу, кітап оқу және ойын арқылы " +
-            "сөйлеуді дамытуды жалғастырыңыз.";
-
-    }
-
-    else if (score >= 5) {
-
-        title = "Қосымша көңіл бөлген жөн 💙";
-
-        text =
-            "Кейбір сөйлеу дағдыларын дамытуға қосымша " +
-            "жаттығулар пайдалы болуы мүмкін.";
-
-        recommendation =
-            "Артикуляциялық жаттығулар жасап, баламен жиі " +
-            "сөйлесіп, жаңа сөздерді бірге үйреніңіз.";
-
-    }
-
-    else {
-
-        title = "Маманмен кеңескен дұрыс 👩‍⚕️";
-
-        text =
-            "Жауаптарыңыз бойынша кейбір сөйлеу дағдыларына " +
-            "қосымша назар аударған жөн болуы мүмкін.";
-
-        recommendation =
-            "Нақты бағалау үшін логопед немесе басқа тиісті " +
-            "маманмен жеке кеңесуді қарастырған дұрыс.";
-
-    }
-
-
-    document.getElementById("testContent").innerHTML = `
-
-        <div class="result-icon">
-            🌟
-        </div>
-
-        <h1 class="result-title">
-            ${title}
-        </h1>
-
-        <p class="result-text">
-            ${text}
-        </p>
-
-        <div class="recommendation">
-
-            <h3>
-                💡 Ұсыныс
-            </h3>
-
-            <p>
-                ${recommendation}
-            </p>
-
-        </div>
-
-        <button
-            class="next-btn"
-            onclick="showExercises()"
-        >
-            Жаттығуларды көру →
-        </button>
-
-    `;
-}
-
-
-function showExercises() {
-
-    document.getElementById("testContent").innerHTML = `
-
-        <div class="step-number">
-            Келесі қадам
-        </div>
-
-        <h1>
-            Балаңызға арналған жаттығулар 🧩
-        </h1>
-
-        <p class="description">
-            Сөйлеуді дамыту үшін күнделікті қысқа
-            жаттығулар орындауға болады.
-        </p>
-
-
-        <div class="recommendation">
-
-            <h3>
-                👄 Артикуляциялық жаттығу
-            </h3>
-
-            <p>
-                Айна алдында ерін мен тіл қимылдарын
-                дұрыс орындауға арналған ойын.
-            </p>
-
-        </div>
-
-
-        <div class="recommendation">
-
-            <h3>
-                🌬️ Тыныс алу жаттығуы
-            </h3>
-
-            <p>
-                Демді дұрыс шығаруға бағытталған
-                қарапайым ойын жаттығулары.
-            </p>
-
-        </div>
-
-
-        <div class="recommendation">
-
-            <h3>
-                🗣️ Дыбыспен жұмыс
-            </h3>
-
-            <p>
-                Дыбыстарды тыңдау, қайталау және
-                сөз ішінде қолдануға арналған тапсырмалар.
-            </p>
-
-        </div>
-
-
-        <button
-            class="next-btn"
-            onclick="location.reload()"
-        >
-            ← Басты бетке оралу
-        </button>
-
-    `;
-      
-
-        function learnMore() {
-
-            document
-                .getElementById("features")
-                .scrollIntoView({
-                    behavior: "smooth"
-                });
+            recommendation =
+                "Нақты бағалау үшін логопед немесе басқа тиісті "
+                + "маманмен жеке кеңесуді қарастырған дұрыс.";
 
         }
 
 
-        function login() {
+        document.getElementById("testContent").innerHTML = `
 
-            alert(
-                "Жеке кабинетке кіру бөлімі жақын арада қосылады. 👤"
-            );
+            <div class="result-icon">
+                🌟
+            </div>
 
+            <h1 class="result-title">
+                ${title}
+            </h1>
+
+            <p class="result-text">
+                ${text}
+            </p>
+
+            <div class="recommendation">
+
+                <h3>
+                    💡 Ұсыныс
+                </h3>
+
+                <p>
+                    ${recommendation}
+                </p>
+
+            </div>
+
+            <button
+                class="next-btn"
+                onclick="showExercises()"
+            >
+                Жаттығуларды көру →
+            </button>
+
+            <button
+                class="login-back"
+                onclick="backToHome()"
+            >
+                ← Басты бетке оралу
+            </button>
+
+        `;
+    }
+
+
+    /* ================= EXERCISES ================= */
+
+    function showExercises() {
+
+        document.getElementById("testContent").innerHTML = `
+
+            <div class="step-number">
+                Келесі қадам
+            </div>
+
+            <h1>
+                Балаңызға арналған жаттығулар 🧩
+            </h1>
+
+            <p class="description">
+                Сөйлеуді дамыту үшін күнделікті қысқа
+                жаттығулар орындауға болады.
+            </p>
+
+
+            <div class="exercise-card">
+
+                <h3>
+                    👄 Артикуляциялық жаттығу
+                </h3>
+
+                <p>
+                    Айна алдында ерін мен тіл қимылдарын
+                    орындауға арналған қарапайым ойын.
+                    Жаттығуды асықпай және баланың
+                    мүмкіндігіне қарай орындаңыз.
+                </p>
+
+            </div>
+
+
+            <div class="exercise-card">
+
+                <h3>
+                    🌬️ Тыныс алу жаттығуы
+                </h3>
+
+                <p>
+                    Демді бірқалыпты шығаруға бағытталған
+                    қарапайым ойын жаттығулары.
+                </p>
+
+            </div>
+
+
+            <div class="exercise-card">
+
+                <h3>
+                    🗣️ Дыбыспен жұмыс
+                </h3>
+
+                <p>
+                    Дыбыстарды тыңдау, қайталау және
+                    сөз ішінде қолдануға арналған тапсырмалар.
+                </p>
+
+            </div>
+
+
+            <button
+                class="next-btn"
+                onclick="backToHome()"
+            >
+                ← Басты бетке оралу
+            </button>
+
+        `;
+    }
+
+
+    /* ================= LEARN MORE ================= */
+
+    function learnMore() {
+
+        const features =
+            document.getElementById("features");
+
+        features.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+
+    /* ================= LOGIN ================= */
+
+    function login() {
+
+        document.getElementById("mainPage").style.display = "none";
+        document.getElementById("mainHeader").style.display = "none";
+        document.getElementById("mainFooter").style.display = "none";
+
+        document.body.insertAdjacentHTML("beforeend", `
+
+            <div class="login-page" id="loginPage">
+
+                <div class="login-card">
+
+                    <div class="login-logo">
+                        🗣️ СӨЙЛЕ
+                    </div>
+
+                    <h1>
+                        Жеке кабинет
+                    </h1>
+
+                    <p>
+                        Платформаға кіру
+                    </p>
+
+                    <input
+                        class="login-input"
+                        id="loginName"
+                        type="text"
+                        placeholder="Аты-жөніңіз"
+                    >
+
+                    <input
+                        class="login-input"
+                        id="loginEmail"
+                        type="email"
+                        placeholder="Email"
+                    >
+
+                    <input
+                        class="login-input"
+                        id="loginPassword"
+                        type="password"
+                        placeholder="Құпиясөз"
+                    >
+
+                    <button
+                        class="login-submit"
+                        onclick="submitLogin()"
+                    >
+                        Кіру
+                    </button>
+
+                    <button
+                        class="login-back"
+                        onclick="backToHome()"
+                    >
+                        ← Басты бетке оралу
+                    </button>
+
+                </div>
+
+            </div>
+
+        `);
+    }
+
+
+    /* ================= LOGIN SUBMIT ================= */
+
+    function submitLogin() {
+
+        const name =
+            document.getElementById("loginName").value.trim();
+
+        const email =
+            document.getElementById("loginEmail").value.trim();
+
+        const password =
+            document.getElementById("loginPassword").value.trim();
+
+
+        if (!name || !email || !password) {
+
+            alert("Барлық жолды толтырыңыз.");
+
+            return;
         }
 
-    </script>
+
+        alert(
+            "Қош келдіңіз, " +
+            name +
+            "! 👋\n\nЖеке кабинет функциясы демо режимінде жұмыс істеп тұр."
+        );
+    }
+
+
+    /* ================= BACK TO HOME ================= */
+
+    function backToHome() {
+
+        const testPage =
+            document.getElementById("testPage");
+
+        if (testPage) {
+            testPage.remove();
+        }
+
+
+        const loginPage =
+            document.getElementById("loginPage");
+
+        if (loginPage) {
+            loginPage.remove();
+        }
+
+
+        document.getElementById("mainPage").style.display = "block";
+        document.getElementById("mainHeader").style.display = "flex";
+        document.getElementById("mainFooter").style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+</script>
 
 </body>
 </html>
+```
