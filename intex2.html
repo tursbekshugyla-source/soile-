@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>СӨЙЛЕ — Баланың сөйлеу дамуына көмектесетін платформа</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7fbff;
+            color: #243447;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            width: 100%;
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: #6ec6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .logo-text {
+            font-size: 25px;
+            font-weight: 800;
+            color: #2676b8;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #425466;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #2684c6;
+        }
+
+        .login-btn {
+            padding: 11px 21px;
+            border-radius: 12px;
+            border: 1px solid #6ec6ff;
+            color: #2676b8;
+            background: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .login-btn:hover {
+            background: #eaf7ff;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            padding: 80px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background:
+                radial-gradient(circle at 85% 30%, #d9f3ff 0, transparent 30%),
+                linear-gradient(135deg, #f7fcff, #eef9ff);
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 9px 16px;
+            border-radius: 30px;
+            background: #e1f5ff;
+            color: #2479b5;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.12;
+            margin-bottom: 22px;
+            color: #1e557d;
+        }
+
+        .hero h1 span {
+            color: #5ab9ee;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #60788b;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            padding: 15px 27px;
+            background: #5db9ed;
+            border: none;
+            color: white;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(93,185,237,0.25);
+            transition: 0.3s;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            background: #45a9df;
+        }
+
+        .secondary-btn {
+            padding: 15px 27px;
+            background: white;
+            border: 1px solid #c8e8f8;
+            color: #2676b8;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ILLUSTRATION ================= */
+
+        .hero-image {
+            width: 470px;
+            height: 420px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: #dff5ff;
+            position: absolute;
+        }
+
+        .child-card {
+            position: relative;
+            width: 310px;
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(53,130,170,0.15);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .child-avatar {
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            border-radius: 50%;
+            background: #ffe6bd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 65px;
+        }
+
+        .child-card h3 {
+            margin-top: 18px;
+            font-size: 21px;
+            color: #31566e;
+        }
+
+        .child-card p {
+            color: #7992a2;
+            margin-top: 8px;
+        }
+
+        .speech {
+            position: absolute;
+            background: white;
+            padding: 13px 18px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            color: #2676b8;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .speech.one {
+            top: 40px;
+            right: 10px;
+        }
+
+        .speech.two {
+            bottom: 45px;
+            left: 5px;
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 85px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #244f6b;
+            margin-bottom: 14px;
+        }
+
+        .section-title p {
+            color: #718898;
+            line-height: 1.6;
+        }
+
+        /* ================= FEATURES ================= */
+
+        .features {
+            background: white;
+        }
+
+        .feature-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .feature-card {
+            padding: 30px 23px;
+            background: #f8fcff;
+            border: 1px solid #e4f3fa;
+            border-radius: 22px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(45,120,160,0.1);
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            background: #dff4ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #315c76;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #7b909e;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* ================= HOW IT WORKS ================= */
+
+        .steps {
+            background: #f0f9ff;
+        }
+
+        .steps-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            background: white;
+            padding: 30px;
+            border-radius: 22px;
+            position: relative;
+        }
+
+        .number {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #63bdec;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            color: #315c76;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #7b909e;
+            line-height: 1.6;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            padding: 70px 7%;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #5ebbed, #77ccef);
+            border-radius: 30px;
+            padding: 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-box h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            border: none;
+            background: white;
+            color: #287eb7;
+            padding: 15px 30px;
+            border-radius: 13px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #183d55;
+            color: white;
+            padding: 45px 7% 25px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-brand h2 {
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            color: #b9d0dc;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #b9d0dc;
+            text-decoration: none;
+            margin-bottom: 9px;
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #9eb8c5;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 950px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-image {
+                width: 100%;
+                transform: scale(0.85);
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .cta-box {
+                padding: 40px 20px;
+            }
+
+            .cta-box h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <a href="#" class="logo">
+            <div class="logo-icon">🗣️</div>
+            <div class="logo-text">СӨЙЛЕ</div>
+        </a>
+
+        <nav>
+            <a href="#about">Біз туралы</a>
+            <a href="#features">Мүмкіндіктер</a>
+            <a href="#how">Қалай жұмыс істейді?</a>
+            <a href="#contact">Байланыс</a>
+        </nav>
+
+        <button class="login-btn" onclick="login()">
+            Кіру
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    🌱 Баланың сөйлеу дамуына арналған платформа
+                </div>
+
+                <h1>
+                    Балаңыздың<br>
+                    <span>сөйлеуін бірге</span><br>
+                    дамытайық
+                </h1>
+
+                <p>
+                    «СӨЙЛЕ» — ата-аналарға баланың сөйлеу дамуын
+                    бақылауға, пайдалы жаттығулар жасауға және
+                    логопед маманынан көмек алуға мүмкіндік беретін
+                    заманауи платформа.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick="startTest()">
+                        Тестті бастау →
+                    </button>
+
+                    <button class="secondary-btn" onclick="learnMore()">
+                        Толығырақ білу
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Иллюстрация -->
+
+            <div class="hero-image">
+
+                <div class="circle"></div>
+
+                <div class="speech one">
+                    Сөйлейік! 💬
+                </div>
+
+                <div class="speech two">
+                    👏 Жарайсың!
+                </div>
+
+                <div class="child-card">
+
+                    <div class="child-avatar">
+                        👧
+                    </div>
+
+                    <h3>
+                        Мен сөйлеп үйренемін!
+                    </h3>
+
+                    <p>
+                        Күн сайын бірге жаттығайық 🌱
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about">
+
+            <div class="section-title">
+
+                <h2>
+                    «СӨЙЛЕ» дегеніміз не?
+                </h2>
+
+                <p>
+                    Бұл — баланың сөйлеу қабілетін ерте кезеңнен
+                    бақылауға және дамытуға көмектесетін
+                    ата-ана мен логопедке арналған цифрлық платформа.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features" id="features">
+
+            <div class="section-title">
+
+                <h2>
+                    Платформаның мүмкіндіктері
+                </h2>
+
+                <p>
+                    Балаңыздың сөйлеу дамуына қажетті негізгі
+                    құралдардың барлығы бір жерде.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        Диагностика
+                    </h3>
+
+                    <p>
+                        Баланың сөйлеу дамуына қатысты
+                        бастапқы ақпаратты жинауға арналған
+                        қарапайым тест.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🧩
+                    </div>
+
+                    <h3>
+                        Жаттығулар
+                    </h3>
+
+                    <p>
+                        Артикуляциялық, тыныс алу және
+                        дыбысты дұрыс айтуға арналған
+                        ойын түріндегі тапсырмалар.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Прогресс
+                    </h3>
+
+                    <p>
+                        Баланың күнделікті орындаған
+                        тапсырмаларын және даму динамикасын
+                        бақылаңыз.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        👩‍⚕️
+                    </div>
+
+                    <h3>
+                        Логопед
+                    </h3>
+
+                    <p>
+                        Маманның ұсыныстарын алып,
+                        баланың сөйлеу дамуы бойынша
+                        бағыт-бағдар алуға болады.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW ================= -->
+
+        <section class="steps" id="how">
+
+            <div class="section-title">
+
+                <h2>
+                    Қалай жұмыс істейді?
+                </h2>
+
+                <p>
+                    Барлығы қарапайым әрі түсінікті.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <div class="step">
+
+                    <div class="number">
+                        1
+                    </div>
+
+                    <h3>
+                        Бала туралы ақпарат
+                    </h3>
+
+                    <p>
+                        Баланың жасы мен сөйлеу ерекшеліктері
+                        туралы қысқаша ақпарат енгізіңіз.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="number">
+                        2
+                    </div>
+
+                    <h3>
+                        Тесттен өтіңіз
+                    </h3>
+
+                    <p>
+                        Бірнеше қарапайым сұрақ арқылы
+                        баланың сөйлеу дамуына қатысты
+                        бастапқы бағалау жүргізіледі.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="number">
+                        3
+                    </div>
+
+                    <h3>
+                        Жаттығуды бастаңыз
+                    </h3>
+
+                    <p>
+                        Платформа ұсынған жаттығуларды
+                        баламен бірге орындап, нәтижені
+                        бақылаңыз.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta" id="contact">
+
+            <div class="cta-box">
+
+                <h2>
+                    Бүгіннен бастап бірге сөйлейік! 💙
+                </h2>
+
+                <p>
+                    Баланың сөйлеу дамуына көңіл бөлу —
+                    оның болашағына жасалған маңызды қадам.
+                </p>
+
+                <button class="cta-btn" onclick="startTest()">
+                    Тестті бастау
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h2>
+                    🗣️ СӨЙЛЕ
+                </h2>
+
+                <p>
+                    Баланың сөйлеу дамуын қолдайтын
+                    заманауи логопедиялық платформа.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Навигация
+                </h4>
+
+                <a href="#about">
+                    Біз туралы
+                </a>
+
+                <a href="#features">
+                    Мүмкіндіктер
+                </a>
+
+                <a href="#how">
+                    Қалай жұмыс істейді?
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Байланыс
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 «СӨЙЛЕ». Барлық құқықтар қорғалған.
+
+        </div>
+
+    </footer>
+function startTest() {
+
+           <!-- ================= JAVASCRIPT ================= -->
+
+<script>
+function startTest() {
+
+    document.body.innerHTML = `
+
+        <style>
+
+            body {
+                background: #f2faff;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                color: #294b60;
+            }
+
+            .test-page {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+
+            .test-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+
+            .test-logo {
+                font-size: 25px;
+                font-weight: bold;
+                color: #2676b8;
+            }
+
+            .back-btn {
+                border: none;
+                background: white;
+                padding: 10px 18px;
+                border-radius: 12px;
+                cursor: pointer;
+                color: #2676b8;
+            }
+
+            .test-card {
+                background: white;
+                border-radius: 25px;
+                padding: 35px;
+                box-shadow: 0 15px 40px rgba(50,120,160,0.1);
+            }
+
+            .progress {
+                width: 100%;
+                height: 8px;
+                background: #e5f3fa;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+
+            .progress-bar {
+                height: 100%;
+                width: 0%;
+                background: #61bbed;
+                transition: 0.3s;
+            }
+
+            .step-number {
+                color: #63bdec;
+                font-weight: bold;
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                color: #244f6b;
+                font-size: 30px;
+            }
+
+            .description {
+                color: #718898;
+                line-height: 1.6;
+            }
+
+            .age-input {
+                width: 100%;
+                padding: 15px;
+                border: 1px solid #d5eaf4;
+                border-radius: 12px;
+                margin-top: 15px;
+                font-size: 16px;
+                outline: none;
+            }
+
+            .answers {
+                display: grid;
+                gap: 12px;
+                margin-top: 25px;
+            }
+
+            .answer {
+                padding: 17px;
+                border: 1px solid #dceff7;
+                border-radius: 14px;
+                background: #fbfeff;
+                cursor: pointer;
+                text-align: left;
+                font-size: 16px;
+                transition: 0.2s;
+            }
+
+            .answer:hover {
+                background: #eef9ff;
+                border-color: #68bced;
+            }
+
+            .answer.selected {
+                background: #dff4ff;
+                border-color: #55afe2;
+            }
+
+            .next-btn {
+                width: 100%;
+                padding: 16px;
+                margin-top: 25px;
+                border: none;
+                border-radius: 14px;
+                background: #5db9ed;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .next-btn:hover {
+                background: #43a9df;
+            }
+
+            .result-icon {
+                font-size: 65px;
+                text-align: center;
+            }
+
+            .result-title {
+                text-align: center;
+                font-size: 30px;
+                color: #244f6b;
+            }
+
+            .result-text {
+                text-align: center;
+                color: #718898;
+                line-height: 1.7;
+            }
+
+            .recommendation {
+                background: #f0f9ff;
+                padding: 20px;
+                border-radius: 16px;
+                margin-top: 25px;
+            }
+
+            .recommendation h3 {
+                color: #287db5;
+            }
+
+            @media(max-width:600px) {
+
+                .test-card {
+                    padding: 23px;
+                }
+
+                h1 {
+                    font-size: 25px;
+                }
+
+            }
+
+        </style>
+
+
+        <div class="test-page">
+
+            <div class="test-header">
+
+                <div class="test-logo">
+                    🗣️ СӨЙЛЕ
+                </div>
+
+                <button class="back-btn" onclick="location.reload()">
+                    ← Басты бет
+                </button>
+
+            </div>
+
+
+            <div class="test-card">
+
+                <div class="progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <div id="testContent"></div>
+
+            </div>
+
+        </div>
+
+    `;
+
+    showAgeStep();
+}
+
+
+let currentQuestion = 0;
+let score = 0;
+let childAge = 0;
+
+
+const questions = [
+
+    {
+        question: "Бала қарапайым сөздерді анық айта ала ма?",
+        answers: [
+            ["Иә", 2],
+            ["Кейде", 1],
+            ["Жоқ", 0]
+        ]
+    },
+
+    {
+        question: "Бала өз ойын сөзбен жеткізе ала ма?",
+        answers: [
+            ["Иә, еркін жеткізеді", 2],
+            ["Кейде қиналады", 1],
+            ["Жоқ, қиналады", 0]
+        ]
+    },
+
+    {
+        question: "Бала сұрақтарға түсінікті жауап бере ала ма?",
+        answers: [
+            ["Иә", 2],
+            ["Кейде", 1],
+            ["Жоқ", 0]
+        ]
+    },
+
+    {
+        question: "Бала кейбір дыбыстарды айтуда қинала ма?",
+        answers: [
+            ["Жоқ", 2],
+            ["Кейбір дыбыстарда", 1],
+            ["Иә, жиі қиналады", 0]
+        ]
+    },
+
+    {
+        question: "Бала жаңа сөздерді үйренуге қызығушылық таныта ма?",
+        answers: [
+            ["Иә", 2],
+            ["Кейде", 1],
+            ["Сирек", 0]
+        ]
+    }
+
+];
+
+
+function showAgeStep() {
+
+    document.getElementById("progressBar").style.width = "0%";
+
+    document.getElementById("testContent").innerHTML = `
+
+        <div class="step-number">
+            1-қадам
+        </div>
+
+        <h1>
+            Балаңыз туралы бастайық 👋
+        </h1>
+
+        <p class="description">
+            Алдымен баланың жасын көрсетіңіз.
+            Бұл сұрақтарды баланың жасына қарай
+            дұрыс бағыттауға көмектеседі.
+        </p>
+
+        <input
+            class="age-input"
+            id="age"
+            type="number"
+            min="1"
+            max="10"
+            placeholder="Баланың жасы"
+        >
+
+        <button
+            class="next-btn"
+            onclick="startQuestions()"
+        >
+            Жалғастыру →
+        </button>
+
+    `;
+}
+
+
+function startQuestions() {
+
+    const age = document.getElementById("age").value;
+
+    if (!age || age < 1 || age > 10) {
+
+        alert("Баланың жасын 1-10 аралығында енгізіңіз.");
+
+        return;
+    }
+
+    childAge = age;
+    currentQuestion = 0;
+    score = 0;
+
+    showQuestion();
+}
+
+
+function showQuestion() {
+
+    const question = questions[currentQuestion];
+
+    const progress =
+        ((currentQuestion + 1) / questions.length) * 100;
+
+    document.getElementById("progressBar").style.width =
+        progress + "%";
+
+
+    let answersHTML = "";
+
+    question.answers.forEach((answer, index) => {
+
+        answersHTML += `
+
+            <button
+                class="answer"
+                onclick="selectAnswer(${answer[1]}, this)"
+            >
+                ${answer[0]}
+            </button>
+
+        `;
+
+    });
+
+
+    document.getElementById("testContent").innerHTML = `
+
+        <div class="step-number">
+            ${currentQuestion + 1}-сұрақ / ${questions.length}
+        </div>
+
+        <h1>
+            ${question.question}
+        </h1>
+
+        <div class="answers">
+
+            ${answersHTML}
+
+        </div>
+
+    `;
+}
+
+
+function selectAnswer(points, element) {
+
+    score += points;
+
+    document.querySelectorAll(".answer").forEach(button => {
+
+        button.disabled = true;
+
+    });
+
+
+    element.classList.add("selected");
+
+
+    setTimeout(() => {
+
+        currentQuestion++;
+
+        if (currentQuestion < questions.length) {
+
+            showQuestion();
+
+        } else {
+
+            showResult();
+
+        }
+
+    }, 400);
+
+}
+
+
+function showResult() {
+
+    document.getElementById("progressBar").style.width = "100%";
+
+
+    let title;
+    let text;
+    let recommendation;
+
+
+    if (score >= 8) {
+
+        title = "Сөйлеу дамуы жақсы деңгейде 🌱";
+
+        text =
+            "Жауаптарыңыз бойынша баланың сөйлеу дағдылары " +
+            "жалпы жақсы деңгейде көрінеді.";
+
+        recommendation =
+            "Күнделікті әңгімелесу, кітап оқу және ойын арқылы " +
+            "сөйлеуді дамытуды жалғастырыңыз.";
+
+    }
+
+    else if (score >= 5) {
+
+        title = "Қосымша көңіл бөлген жөн 💙";
+
+        text =
+            "Кейбір сөйлеу дағдыларын дамытуға қосымша " +
+            "жаттығулар пайдалы болуы мүмкін.";
+
+        recommendation =
+            "Артикуляциялық жаттығулар жасап, баламен жиі " +
+            "сөйлесіп, жаңа сөздерді бірге үйреніңіз.";
+
+    }
+
+    else {
+
+        title = "Маманмен кеңескен дұрыс 👩‍⚕️";
+
+        text =
+            "Жауаптарыңыз бойынша кейбір сөйлеу дағдыларына " +
+            "қосымша назар аударған жөн болуы мүмкін.";
+
+        recommendation =
+            "Нақты бағалау үшін логопед немесе басқа тиісті " +
+            "маманмен жеке кеңесуді қарастырған дұрыс.";
+
+    }
+
+
+    document.getElementById("testContent").innerHTML = `
+
+        <div class="result-icon">
+            🌟
+        </div>
+
+        <h1 class="result-title">
+            ${title}
+        </h1>
+
+        <p class="result-text">
+            ${text}
+        </p>
+
+        <div class="recommendation">
+
+            <h3>
+                💡 Ұсыныс
+            </h3>
+
+            <p>
+                ${recommendation}
+            </p>
+
+        </div>
+
+        <button
+            class="next-btn"
+            onclick="showExercises()"
+        >
+            Жаттығуларды көру →
+        </button>
+
+    `;
+}
+
+
+function showExercises() {
+
+    document.getElementById("testContent").innerHTML = `
+
+        <div class="step-number">
+            Келесі қадам
+        </div>
+
+        <h1>
+            Балаңызға арналған жаттығулар 🧩
+        </h1>
+
+        <p class="description">
+            Сөйлеуді дамыту үшін күнделікті қысқа
+            жаттығулар орындауға болады.
+        </p>
+
+
+        <div class="recommendation">
+
+            <h3>
+                👄 Артикуляциялық жаттығу
+            </h3>
+
+            <p>
+                Айна алдында ерін мен тіл қимылдарын
+                дұрыс орындауға арналған ойын.
+            </p>
+
+        </div>
+
+
+        <div class="recommendation">
+
+            <h3>
+                🌬️ Тыныс алу жаттығуы
+            </h3>
+
+            <p>
+                Демді дұрыс шығаруға бағытталған
+                қарапайым ойын жаттығулары.
+            </p>
+
+        </div>
+
+
+        <div class="recommendation">
+
+            <h3>
+                🗣️ Дыбыспен жұмыс
+            </h3>
+
+            <p>
+                Дыбыстарды тыңдау, қайталау және
+                сөз ішінде қолдануға арналған тапсырмалар.
+            </p>
+
+        </div>
+
+
+        <button
+            class="next-btn"
+            onclick="location.reload()"
+        >
+            ← Басты бетке оралу
+        </button>
+
+    `;
+
+}   </script>        
+
+        function learnMore() {
+
+            document
+                .getElementById("features")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+
+        function login() {
+
+            alert(
+                "Жеке кабинетке кіру бөлімі жақын арада қосылады. 👤"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
